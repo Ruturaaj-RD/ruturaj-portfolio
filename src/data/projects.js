@@ -30,7 +30,7 @@ export const projects = [
 
     visualTitle: "Your work, organized.",
 
-    image: "/public/images/projects/taskflow.png",
+    image: "/images/projects/taskflow.png",
 
     githubUrl: "",
     liveUrl: ""
