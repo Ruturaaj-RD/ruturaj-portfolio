@@ -2,37 +2,41 @@ export const education = [
   {
     id: "mca",
 
-    year: "2024",
+    year: "2022-2024",
 
     degree: "Master of Computer Applications",
 
     abbreviation: "MCA",
 
     institution:
-      "Sardar Patel Institute of Technology (SPIT)",
+      "Sardar Patel Institute of Technology, Mumbai",
 
     location: "Mumbai, Maharashtra",
 
     university:
-      "University of Mumbai"
+      "University of Mumbai",
+
+    cgpa:"8.77"
   },
 
   {
     id: "bcs",
 
-    year: "2022",
+    year: "2019-2022",
 
     degree: "Bachelor of Computer Science",
 
     abbreviation: "BCS",
 
     institution:
-      "College of Computer Science and Information Technology",
+      "College of Computer Science and Information Technology, Latur",
 
     location: "Latur, Maharashtra",
 
     university:
-      "Swami Ramanand Teerth Marathwada University"
+      "Swami Ramanand Teerth Marathwada University, Nanded",
+
+    cgpa:"9.89"
   }
 ];
 

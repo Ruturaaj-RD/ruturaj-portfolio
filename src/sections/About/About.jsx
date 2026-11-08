@@ -18,7 +18,6 @@ function About() {
             <SectionHeading
               eyebrow="GET TO KNOW ME"
               title="A little about me."
-              description="The person behind the code, my journey into development, and what drives me to keep learning."
             />
 
             <div className="mt-7 space-y-5">

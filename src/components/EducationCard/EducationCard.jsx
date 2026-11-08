@@ -45,6 +45,12 @@ function EducationCard({ item, isLast }) {
           {item.degree}
         </h3>
 
+        {/* CGPA */}
+
+        <p className="mt-3 text-sm font-medium leading-6 text-muted">
+         CGPA - {item.cgpa}
+        </p>
+
 
         {/* Institution */}
 
