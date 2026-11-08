@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+
+/* =================================
+   DESIGN TOKENS
+================================= */
+
+@theme {
+  /* Colors */
+  --color-background: #080b12;
+
+  --color-surface: #111827;
+  --color-surface-soft: #172033;
+
+  --color-foreground: #f1f5f9;
+  --color-muted: #94a3b8;
+
+  --color-accent: #a5b4fc;
+  --color-accent-teal: #5eead4;
+
+  --color-line: rgba(148, 163, 184, 0.18);
+
+    /* Typography */
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+    /* Rounded corners */
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  img {
+    max-width: 100%;
+  }
+}
+
+
+
+/* =================================
+   GLOBAL DEFAULTS
+================================= */
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #080b12;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keyboard focus visibility */
+
+@layer base {
+  :where(a, button, input, textarea, select):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+}
+
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+
+/* Hero entrance animation */
+
+@keyframes hero-fade-up {
+
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .hero-enter {
+    animation: hero-fade-up 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+}
